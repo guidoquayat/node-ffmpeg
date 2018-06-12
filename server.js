@@ -35,7 +35,7 @@ ffmpeg.setFlvtoolPath('./flvtool2.exe');
 
 
 // make sure you set the correct path to your video file
-function test() { ffmpeg('rtmp://165.227.119.155:1935/test')
+function test() { ffmpeg('rtmp://127.0.0.1:1935/test')
   // set video bitrate
   .videoBitrate(1024)
   // set h264 preset
@@ -45,11 +45,13 @@ function test() { ffmpeg('rtmp://165.227.119.155:1935/test')
   // set audio bitrate
   .audioBitrate('128k')
   // set audio codec
-  .inputOption('-listen 1')
+  .inputOption('-i')
   // set number of audio channels
   .audioChannels(2)
   // set hls segments time
   .addOption('-f flv')
+
+
 
 
   .on('start', function(data) {
