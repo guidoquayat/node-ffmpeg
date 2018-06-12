@@ -35,7 +35,7 @@ ffmpeg.setFlvtoolPath('./flvtool2.exe');
 
 
 // make sure you set the correct path to your video file
-function test() { ffmpeg('rtmp://localhost:80/')
+function test() { ffmpeg('rtmp://127.0.0.1:1935/test')
   // set video bitrate
   .videoBitrate(1024)
   // set h264 preset
@@ -73,8 +73,6 @@ function test() { ffmpeg('rtmp://localhost:80/')
   .addOption('-f flv')
   .size('320x200')
   .audioBitrate('100k')
-
-
 
 
 //me dice el formato de audio y el de video
