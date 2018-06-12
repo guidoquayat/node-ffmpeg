@@ -35,7 +35,7 @@ ffmpeg.setFlvtoolPath('./flvtool2.exe');
 
 
 // make sure you set the correct path to your video file
-function test() { ffmpeg('rtmp://localhost:61953/')
+function test() { ffmpeg('rtmp://localhost:80/')
   // set video bitrate
   .videoBitrate(1024)
   // set h264 preset
