@@ -52,7 +52,7 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
   .audioChannels(2)
   // set hls segments time
   .addOption('-f flv')
-  .addOption('-filter: eof_action')
+  // .addOption('-filter: eof_action')
 
 
 
