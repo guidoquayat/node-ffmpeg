@@ -2,7 +2,7 @@
 // const ffprobePath = require('@ffprobe-installer/ffprobe').path;
 const ffmpeg = require('fluent-ffmpeg');
 const fs = require ('fs');
-ffmpeg.setFfmpegPath('/usr/share/ffmpeg.exe');
+ffmpeg.setFfmpegPath('/usr/bin/ffmpeg.exe');
 // ffmpeg.setFfprobePath(ffprobePath);
 // ffmpeg.setFlvtoolPath('./flvtool2.exe');
 
