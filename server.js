@@ -45,13 +45,12 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
   // set audio bitrate
   .audioBitrate('128k')
   // set audio codec
-  //.inputOption('-i')
+  .inputOption('-y')
   // set number of audio channels
   .audioChannels(2)
   // set hls segments time
   .addOption('-f flv')
 
-  .addOption('video_track_timescale 18000')
 
 
 
