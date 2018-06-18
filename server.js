@@ -1,10 +1,10 @@
-const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
-const ffprobePath = require('@ffprobe-installer/ffprobe').path;
+// const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
+// const ffprobePath = require('@ffprobe-installer/ffprobe').path;
 const ffmpeg = require('fluent-ffmpeg');
 const fs = require ('fs');
 ffmpeg.setFfmpegPath('/usr/share/ffmpeg');
-ffmpeg.setFfprobePath(ffprobePath);
-ffmpeg.setFlvtoolPath('./flvtool2.exe');
+// ffmpeg.setFfprobePath(ffprobePath);
+// ffmpeg.setFlvtoolPath('./flvtool2.exe');
 
 
 // var proc = new ffmpeg();
