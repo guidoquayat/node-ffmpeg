@@ -71,10 +71,7 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
   // save to file
   .save('rtmp://a.rtmp.youtube.com/live2/au2a-7w7w-tub1-4kqr')
 
-  .save('rtmp://live-api.facebook.com:80/rtmp/1619085664794470?s_ps=1&s_vt=api&a=ATgwsXbzGIEey3_r')
-  .addOption('-f flv')
-  .size('320x200')
-  .audioBitrate('100k')
+  
 
 
 //me dice el formato de audio y el de video
