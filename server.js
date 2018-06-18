@@ -39,7 +39,7 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
   // set video bitrate
   .videoBitrate(1024)
 
-   .inputOption('-use_wallclock_as_timestamps 1')
+   .inputOption('-fflags +igndts')
   // set h264 preset
   // .addOption('preset','superfast')
   // set target codec
@@ -77,6 +77,7 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
 
   // save to file
   .output('rtmp://a.rtmp.youtube.com/live2/au2a-7w7w-tub1-4kqr', { end:true })
+  .addOption('-fflags +genpts')
 
 
 //me dice el formato de audio y el de video
