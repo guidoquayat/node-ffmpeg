@@ -53,7 +53,7 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
   // set hls segments time
   .addOption('-pix_fmt yuv420p')
   .addOption('-preset ultrafast')
-  .addOption('-r 25 -g 20')
+  // .addOption('-r 25 -g 20')
   .addOption('-b:v 2500k')
   .addOption('-codec:a libmp3lame')
   .addOption('-ar 44100')
