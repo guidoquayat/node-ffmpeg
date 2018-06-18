@@ -52,6 +52,8 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
   .audioChannels(2)
   // set hls segments time
   .addOption('-f flv')
+  .addOption('-filter:a "asetpts=N/SR/TB"')
+
 
 
 
@@ -68,9 +70,6 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
 
   .on('stderr', function(stderrLine) {
     console.log('Stderr output: ' + stderrLine);
-    if (stderrLine == '[libmp3lame @ 0x5534c40] Queue input is backward in time') {
-      test();
-    }
   })
 
 
