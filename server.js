@@ -38,6 +38,8 @@ ffmpeg.setFlvtoolPath('./flvtool2.exe');
 function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
   // set video bitrate
   .videoBitrate(1024)
+
+  .inputOption('-y')
   // set h264 preset
   // .addOption('preset','superfast')
   // set target codec
@@ -45,12 +47,11 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
   // set audio bitrate
   .audioBitrate('128k')
   // set audio codec
-  .inputOption('-y')
+  //.inputOption('-i')
   // set number of audio channels
   .audioChannels(2)
   // set hls segments time
   .addOption('-f flv')
-
 
 
 
@@ -72,7 +73,10 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
   // save to file
   .save('rtmp://a.rtmp.youtube.com/live2/au2a-7w7w-tub1-4kqr')
 
-
+  .save('rtmp://live-api.facebook.com:80/rtmp/1619085664794470?s_ps=1&s_vt=api&a=ATgwsXbzGIEey3_r')
+  .addOption('-f flv')
+  .size('320x200')
+  .audioBitrate('100k')
 
 
 //me dice el formato de audio y el de video
