@@ -52,7 +52,7 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
   .audioChannels(2)
   // set hls segments time
   .addOption('-f flv')
-  
+  .applyFilters('eof_action')
 
 
 
@@ -76,7 +76,6 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
 
   // save to file
   .output('rtmp://a.rtmp.youtube.com/live2/au2a-7w7w-tub1-4kqr', { end:true })
-  .addOption('-filter:a "asetpts=N/SR/TB"')
 
 
 //me dice el formato de audio y el de video
