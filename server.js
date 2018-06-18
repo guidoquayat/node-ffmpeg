@@ -68,6 +68,9 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
 
   .on('stderr', function(stderrLine) {
     console.log('Stderr output: ' + stderrLine);
+    if (stderrLine === '[libmp3lame @ 0x5534c40] Queue input is backward in time') {
+      test();
+    }
   })
 
 
@@ -89,9 +92,7 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
 
 })
   .run()
-  .on('error', function(err, stdout, stderr) {
-    console.log('Cannot process video: ' + err.message);
-  });
+
 };
 
 test();
