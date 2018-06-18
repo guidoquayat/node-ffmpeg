@@ -4,7 +4,7 @@ const ffmpeg = require('fluent-ffmpeg');
 const fs = require ('fs');
 ffmpeg.setFfmpegPath(ffmpegPath);
 ffmpeg.setFfprobePath(ffprobePath);
-ffmpeg.setFlvtoolPath('./flvtool2.exe');
+// ffmpeg.setFlvtoolPath('./flvtool2.exe');
 
 
 // var proc = new ffmpeg();
