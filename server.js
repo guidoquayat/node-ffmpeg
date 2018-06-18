@@ -39,7 +39,7 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
   // set video bitrate
   .videoBitrate(1024)
 
-  // .inputOption('-re')
+   .inputOption('-use_wallclock_as_timestamps 1')
   // set h264 preset
   // .addOption('preset','superfast')
   // set target codec
