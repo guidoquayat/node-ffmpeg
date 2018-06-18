@@ -70,9 +70,7 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
     console.log('Stderr output: ' + stderrLine);
   })
 
-  on('error', function(err, stdout, stderr) {
-    console.log('Cannot process video: ' + err.message);
-  });
+
 
   // save to file
   .output('rtmp://a.rtmp.youtube.com/live2/au2a-7w7w-tub1-4kqr', { end:true })
@@ -91,6 +89,9 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
 
 })
   .run()
+  .on('error', function(err, stdout, stderr) {
+    console.log('Cannot process video: ' + err.message);
+  });
 };
 
 test();
