@@ -71,7 +71,7 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
   })
 
   // save to file
-  .stream('rtmp://a.rtmp.youtube.com/live2/au2a-7w7w-tub1-4kqr')
+  .output('rtmp://a.rtmp.youtube.com/live2/au2a-7w7w-tub1-4kqr')
 
 
 //me dice el formato de audio y el de video
