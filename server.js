@@ -68,7 +68,7 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
 
   .on('stderr', function(stderrLine) {
     console.log('Stderr output: ' + stderrLine);
-    if (stderrLine = [libmp3lame @ 0x5534c40] Queue input is backward in time) {
+    if (stderrLine = '[libmp3lame @ 0x5534c40] Queue input is backward in time') {
       test();
     }
   })
