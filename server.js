@@ -44,7 +44,6 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
   // .addOption('preset','superfast')
   // set target codec
   .videoCodec('libx264')
-  .applyFilters('eof_action')
   // set audio bitrate
   .audioBitrate('128k')
   // set audio codec
@@ -53,6 +52,7 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
   .audioChannels(2)
   // set hls segments time
   .addOption('-f flv')
+  .addOption('-filter: eof_action')
 
 
 
