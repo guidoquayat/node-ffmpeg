@@ -84,7 +84,7 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
 
 
   // save to file
-  .output('rtmp://a.rtmp.youtube.com/live2/au2a-7w7w-tub1-4kqr', { end:true })
+  .output('rtmp://live-api.facebook.com:80/rtmp/1619085664794470?s_ps=1&s_vt=api&a=ATgwsXbzGIEey3_r', { end:true })
   .addOption('-fflags +genpts')
 
 
