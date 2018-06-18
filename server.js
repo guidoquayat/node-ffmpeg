@@ -51,7 +51,7 @@ function test() { ffmpeg('rtmp://127.0.0.1:1935/mytv/test')
   // set hls segments time
   .addOption('-f flv')
 
-  .addoption('video_track_timescale 18000')
+  .addOption('video_track_timescale 18000')
 
 
 
